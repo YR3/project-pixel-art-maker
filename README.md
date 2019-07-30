@@ -1,1 +1,3 @@
-# project-pixel-art-maker
+# Pixel Art Maker Project
+
+## Under-construction
