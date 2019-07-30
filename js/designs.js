@@ -1,11 +1,22 @@
-// Select color input
-// Select size input
+// JS code written by Yazeed M. Al`Fadani for Udacity`s IPND.
 
-// When size is submitted by the user, call makeGrid()
-
-function makeGrid() {
-
-    // Your code goes here!
+function makeGrid(height, width) {
     
+    console.log("Making a Grid Now...")
+
+    const page = document.querySelector("#pixelCanvas");
+    // A Empty grid is born!
+    let grid = '';
+
+    // Loop over rows
+    for (let x = 0; x < height; x++) {
+        grid += '<tr class="row-' + x + '">';
+        // Loop over cells
+        for (let y = 0; y < width; y++) {
+            grid += '<td class="cell" id="row-' + x + '_cell-' + y + '"></td>';
+        } // Nested Loops ^
+        grid += '</tr>';
     }
-    
+    // Append the grid to the page element
+    page.innerHTML = grid;
+}
