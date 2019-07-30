@@ -22,6 +22,14 @@ function makeGrid(height, width) {
     // Add click event to grid cells after the canvas grid has been created
     addActionsOnCells();
 }
+// Inputs user values and push them to the DOM
+function formSubmission() {
+    event.preventDefault();
+    const height = document.querySelector('#inputHeight').value;
+    const width = document.querySelector('#inputWidth').value;
+    makeGrid(height, width);
+}
+
 // Put click events to all cells and color 
 function addActionsOnCells() {
     const colorPicker = document.querySelector("#colorPicker");
@@ -32,3 +40,9 @@ function addActionsOnCells() {
         });
     }
 }
+
+// Starter Code
+document.querySelector('#sizePicker').onsubmit = function () {
+    formSubmission();
+};
+
