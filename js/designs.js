@@ -19,4 +19,16 @@ function makeGrid(height, width) {
     }
     // Append the grid to the page element
     page.innerHTML = grid;
+    // Add click event to grid cells after the canvas grid has been created
+    addActionsOnCells();
+}
+// Put click events to all cells and color 
+function addActionsOnCells() {
+    const colorPicker = document.querySelector("#colorPicker");
+    const cells = document.querySelectorAll('.cell');
+    for (let cell = 0; cell < cells.length; cell++) {
+        cells[cell].addEventListener("click", function (event) {
+            event.target.style.backgroundColor = colorPicker.value;
+        });
+    }
 }
