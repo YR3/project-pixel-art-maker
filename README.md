@@ -1,3 +1,3 @@
-# Pixel Art Maker Project
+# Yazeed M. AlFadani`s Pixel Art Maker Project
 
-## Under-construction
+## For Udacity`s Connect Into to Programming course.
